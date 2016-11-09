@@ -1,0 +1,48 @@
+# Terminal
+[app] (class=URxvt) (Title!=IRC|MOC) {1}
+  [Dimensions]  {804 860}
+  [Position]  (TOPRIGHT) {0 0}
+  [IgnoreSizeHints] {yes}
+  [Deco] {NONE}
+[end]
+[app] (class=URxvt) (Title!=IRC|MOC|_XXX_)
+  [Dimensions]  {1116 1061}
+  [Position]  (TOPLEFT) {0 0}
+  [IgnoreSizeHints] {yes}
+  [Deco] {NONE}
+[end]
+
+# music and chat
+[group]
+  [app] (Title=IRC|MOC)
+
+  [Workspace] {0}
+  [FocusNewWindow] {yes}
+  [Dimensions]  {804 204}
+  [Position]  (BOTTOMRIGHT) {0 0}
+  [IgnoreSizeHints] {yes}
+[end]
+
+# Firefox
+[app] (name=Navigator)
+  [Dimensions]  {1116 1061}
+  [Position]  (TOPLEFT) {0 0}
+  [Deco] {NONE}
+[end]
+
+# Thunderbird
+[app] (name=Mail)
+  [Workspace] {2}
+  [Deco] {NONE}
+[end]
+
+# place secondary windows of an app to the right
+[app] (class=[current]) (Transient=no) (name!=Navigator|Dialog|Alert)
+  [Dimensions]  {804 860}
+  [Position] (TOPRIGHT) {0 0}
+  [Deco] {TOOL}
+[end]
+
+[app] (name=Mail)
+  [Position] (TOPRIGHT) {24 24}
+[end]
