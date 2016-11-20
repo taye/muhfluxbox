@@ -1,14 +1,8 @@
 # Terminal
-[app] (class=URxvt) (Title!=IRC|MOC) {1}
+[app] (class=URxvt) (Title!=IRC|MOC)
+  [IgnoreSizeHints] {yes}
   [Dimensions]  {804 860}
   [Position]  (TOPRIGHT) {0 0}
-  [IgnoreSizeHints] {yes}
-  [Deco] {NONE}
-[end]
-[app] (class=URxvt) (Title!=IRC|MOC|_XXX_)
-  [Dimensions]  {1116 1061}
-  [Position]  (TOPLEFT) {0 0}
-  [IgnoreSizeHints] {yes}
   [Deco] {NONE}
 [end]
 

@@ -58,10 +58,12 @@ Mod4 j :MacroCmd {FocusDown}  {Raise}
 Mod4 k :MacroCmd {FocusUp}    {Raise}
 Mod4 l :MacroCmd {FocusRight} {Raise}
 
-Mod4 Shift h :MacroCmd {ResizeTo 1116 1061} {MoveTo 0 0 TOPLEFT   } {Raise}
-Mod4 Shift j :MacroCmd {ResizeTo  204 1061} {MoveTo 0 0 BOTTOMLEFT} {Raise}
-Mod4 Shift l :MacroCmd {ResizeTo  804 860 } {MoveTo 0 0 TOPRIGHT  } {Raise}
-Mod4 Shift k :Maximize                                              {Raise}
+Mod4 Shift h :MacroCmd {ResizeTo 1116 1061} {MoveTo 0 0 TOPLEFT } {Raise}
+Mod4 Shift l :MacroCmd {ResizeTo  804  860} {MoveTo 0 0 TOPRIGHT} {Raise}
+
+Mod4 Shift j     :MacroCmd {ResizeVertical  202} {Raise}
+Mod4 Shift k     :MacroCmd {ResizeVertical -202} {Raise}
+Mod4 Shift space :MacroCmd {ResizeVertical -859} {Raise}
 
 # open a terminal
 Mod4 Return :Exec urxvt
@@ -91,7 +93,6 @@ Mod4 d :Close
 Alt F5 :Kill
 Alt F9 :Minimize
 Alt F10 :MacroCmd {Maximize} {Raise}
-Mod4 space :MacroCmd {Maximize} {Raise}
 Mod4 f :Fullscreen
 
 # open the window menu
@@ -109,8 +110,8 @@ Control Alt Left :PrevWorkspace
 Control Alt Right :NextWorkspace
 
 # send the current window and follow it to previous/next workspace
-Control Alt Shift Left :TakeToPrevWorkspace
-Control Alt Shift Right :TakeToNextWorkspace
+Mod4 Shift Left :TakeToPrevWorkspace
+Mod4 Shift Right :TakeToNextWorkspace
 
 # change to a specific workspace
 Mod4 1 :Workspace 1
@@ -137,13 +138,13 @@ Control Mod4 9 :TakeToWorkspace 9
 Control Mod4 0 :TakeToWorkspace 10
 
 # send the current window to a specific workspace
-Control Alt Shift 1 :SendToWorkspace 1
-Control Alt Shift 2 :SendToWorkspace 2
-Control Alt Shift 3 :SendToWorkspace 3
-Control Alt Shift 4 :SendToWorkspace 4
-Control Alt Shift 5 :SendToWorkspace 5
-Control Alt Shift 6 :SendToWorkspace 6
-Control Alt Shift 7 :SendToWorkspace 7
-Control Alt Shift 8 :SendToWorkspace 8
-Control Alt Shift 9 :SendToWorkspace 9
-Control Alt Shift 0 :SendToWorkspace 10
+Mod4 Shift 1 :SendToWorkspace 1
+Mod4 Shift 2 :SendToWorkspace 2
+Mod4 Shift 3 :SendToWorkspace 3
+Mod4 Shift 4 :SendToWorkspace 4
+Mod4 Shift 5 :SendToWorkspace 5
+Mod4 Shift 6 :SendToWorkspace 6
+Mod4 Shift 7 :SendToWorkspace 7
+Mod4 Shift 8 :SendToWorkspace 8
+Mod4 Shift 9 :SendToWorkspace 9
+Mod4 Shift 0 :SendToWorkspace 10
