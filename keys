@@ -63,7 +63,9 @@ Mod4 Shift l :MacroCmd {ResizeTo  804  860} {MoveTo 0 0 TOPRIGHT} {Raise}
 
 Mod4 Shift j     :MacroCmd {ResizeVertical  202} {Raise}
 Mod4 Shift k     :MacroCmd {ResizeVertical -202} {Raise}
-Mod4 Shift space :MacroCmd {ResizeVertical -859} {Raise}
+
+Mod4 Shift space :MacroCmd {ResizeTo 1116 204} {Raise} {MoveTo 0 0 BOTTOMLEFT}
+Mod4 space :Maximize {Raise}
 
 # open a terminal
 Mod4 Return :Exec urxvt
@@ -83,6 +85,10 @@ Shift 232 :Exec xbacklight -1 -time 0 -steps 1
 Shift 233 :Exec xbacklight +1 -time 0 -steps 1
 
 # media
+XF86AudioPause :Exec mocp --pause
+XF86AudioPlay  :Exec mocp --unpause
+209 :Exec mocp --pause
+208 :Exec mocp --unpause
 172 :Exec mocp --toggle-pause
 173 :Exec mocp --prev
 171 :Exec mocp --next
