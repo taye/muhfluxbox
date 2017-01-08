@@ -1,7 +1,8 @@
 # dmenu launcher
 Mod4 p       :Exec j4dd
-Mod4 Shift p :Exec rofi -show combi -combi-modi "window,drun,run,script"
+Mod4 w :Exec rofi -show combi -combi-modi "window,drun,run,script"
 Mod4 Delete  :Exec slock & sleep 0.2 && systemctl suspend
+Mod4 Shift Delete  :Exec slock
 XF86Search   :Exec xdg-open ~
 
 #screenshot
@@ -65,10 +66,10 @@ Mod4 Shift j     :MacroCmd {ResizeVertical  202} {Raise}
 Mod4 Shift k     :MacroCmd {ResizeVertical -202} {Raise}
 
 Mod4 Shift space :MacroCmd {ResizeTo 1116 204} {Raise} {MoveTo 0 0 BOTTOMLEFT}
-Mod4 space :Maximize {Raise}
+Mod4 space :MacroCmd {Maximize} {Raise}
 
 # open a terminal
-Mod4 Return :Exec urxvt
+Mod4 Return :Exec cancer
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
@@ -85,8 +86,8 @@ Shift 232 :Exec xbacklight -1 -time 0 -steps 1
 Shift 233 :Exec xbacklight +1 -time 0 -steps 1
 
 # media
-XF86AudioPause :Exec mocp --pause
-XF86AudioPlay  :Exec mocp --unpause
+xf86AudioPause :Exec mocp --pause
+#XF86AudioPlay  :Exec mocp --unpause
 209 :Exec mocp --pause
 208 :Exec mocp --unpause
 172 :Exec mocp --toggle-pause

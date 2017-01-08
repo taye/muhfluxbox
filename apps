@@ -1,5 +1,5 @@
 # Terminal
-[app] (class=URxvt) (Title!=IRC|MOC)
+[app] (class=Terminal) (Title!=IRC|MOC)
   [IgnoreSizeHints] {yes}
   [Dimensions]  {804 860}
   [Position]  (TOPRIGHT) {0 0}
